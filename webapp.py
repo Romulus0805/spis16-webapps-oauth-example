@@ -89,7 +89,7 @@ def renderPage2():
     if 'user_data' in session:
         followers=session['user_data']['followers']
     else:
-        followers = ''; #needs fixing
+        followers = 'no'; #needs fixing
     return render_template('page2.html', follower_user_data=followers)
 
 @app.route('/googleb4c3aeedcc2dd103.html')
