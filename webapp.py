@@ -86,7 +86,10 @@ def renderPage1():
 
 @app.route('/page2')
 def renderPage2():
-    followers=session['user_data']['followers']
+    if 'user_data' in session:
+        followers=session['user_data']['followers']
+    else:
+        followers = ''; #needs fixing
     return render_template('page2.html', follower_user_data=followers)
 
 @app.route('/googleb4c3aeedcc2dd103.html')
